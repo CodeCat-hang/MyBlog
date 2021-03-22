@@ -57,6 +57,7 @@ export default {
     };
   },
   methods: {
+    //初始化标签列表
     async fetch() {
       const res = await this.$http.get("/tags");
       this.model = res.data;

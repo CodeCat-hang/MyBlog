@@ -73,7 +73,7 @@ module.exports = (app) => {
         upload.single("file"),
         async(req, res) => {
             const file = req.file;
-            file.url = `http://localhost:3000/uploads/${file.filename}`;
+            file.url = `http://blog.hangxinyu.cn/uploads/${file.filename}`;
             res.send(file);
         }
     );
@@ -100,14 +100,6 @@ module.exports = (app) => {
             username,
         });
     });
-    //第一次登录把注册注释取消
-    // app.post("/admin/api/register", async(req, res) => {
-    //     const user = await AdminUser.create({
-    //         username: req.body.username,
-    //         password: req.body.password
-    //     });
-    //     res.send(user)
-    // })
 
     app.post("/admin/api/email", async(req, res) => {
         console.log(req.body);

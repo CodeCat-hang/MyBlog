@@ -41,16 +41,6 @@ export default {
       });
       this.$router.push("/");
     }
-    // async register() {
-    //   const res = await this.$http.post("/register", this.model);
-    //   localStorage.setItem("token", res.data.token);
-    //   localStorage.setItem("username", res.data.username);
-    //   this.$message({
-    //     type: "success",
-    //     message: "注册成功"
-    //   });
-    //   this.$router.push("/login");
-    // }
   }
 };
 </script>
